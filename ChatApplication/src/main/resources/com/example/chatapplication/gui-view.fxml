@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Importing necessary JavaFX classes -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.chatapplication.ChatController">
+    <!-- Define padding around the VBox container -->
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Label to display welcome text -->
+    <Label fx:id="welcomeText"/>
+
+    <!-- Text field for user to enter their name -->
+    <TextField fx:id="inputName" promptText="Enter your name"/>
+
+    <!-- Button to set the name, triggers the onHelloButtonClick method in the controller -->
+    <Button text="Set the name!" onAction="#onHelloButtonClick"/>
+
+    <!-- Text area to display messages, non-editable with word wrap enabled -->
+    <TextArea fx:id="messageArea" prefHeight="200.0" prefWidth="300.0" wrapText="true" editable="false"/>
+
+    <!-- Another text field for user to input messages -->
+    <TextField fx:id="inputField" promptText="Enter your message"/>
+
+    <!-- Button to send the message, triggers the onHelloButtonClick method in the controller -->
+    <Button text="Send the message!" onAction="#onSendButtonClick"/>
+
+</VBox>
